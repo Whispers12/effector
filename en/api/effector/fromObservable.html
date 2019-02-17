@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>fromObservable · Effector</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Test&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="fromObservable · Effector"/><meta property="og:type" content="website"/><meta property="og:url" content="https://zerobias.github.io/effector/index.html"/><meta property="og:description" content="&lt;p&gt;Test&lt;/p&gt;
+"/><meta property="og:image" content="https://zerobias.github.io/effector/img/comet.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://zerobias.github.io/effector/img/comet.png"/><link rel="shortcut icon" href="/effector/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/effector/css/main.css"/><script src="/effector/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/effector/en"><img class="logo" src="/effector/img/comet.png" alt="Effector"/><h2 class="headerTitleWithLogo">Effector</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/effector/en/introduction/installation" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/effector/en/api/effector/effector" target="_self">API</a></li><li class=""><a href="/effector/en/help" target="_self">Help</a></li><li class=""><a href="https://github.com/zerobias/effector" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>effector</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">effector</h3><ul class=""><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/effector">API Reference</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/createEvent">createEvent</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/event">Event</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/createEffect">createEffect</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/effect">Effect</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/createStore">createStore</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/store">Store</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/createDomain">createDomain</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/domain">Domain</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/combine">combine</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/createStoreObject">createStoreObject</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/createApi">createApi</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/restore">restore</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector/forward">forward</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/effector/en/api/effector/fromObservable">fromObservable</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">effector-react</h3><ul class=""><li class="navListItem"><a class="navItem" href="/effector/en/api/effector-react/effector-react">API Reference</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector-react/createGate">createGate</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector-react/gate">Gate</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">effector-vue</h3><ul class=""><li class="navListItem"><a class="navItem" href="/effector/en/api/effector-vue/effector-vue">API Reference</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector-vue/vue-effector">VueEffector</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector-vue/component-options">ComponentOptions</a></li><li class="navListItem"><a class="navItem" href="/effector/en/api/effector-vue/vue">Vue</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">fromObservable</h1></header><article><div><span><p>Test</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/effector/en/api/effector/forward"><span class="arrow-prev">← </span><span>forward</span></a><a class="docs-next button" href="/effector/en/api/effector-react/effector-react"><span>API Reference</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/effector/" class="nav-home"><img src="/effector/img/comet.png" alt="Effector" width="66" height="58"/></a><div><h5>Docs</h5><a href="/effector/en/installation.html">Getting Started (or other categories)</a><a href="/effector/en/api/effector/effector.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/effector/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/effector" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://gitter.im/effector-js/community">Gitter</a></div><div><h5>More</h5><a href="/effector/blog">Blog</a><a href="https://github.com/zerobias/effector">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/zerobias/effector/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 zerobias</section></footer></div></body></html>
